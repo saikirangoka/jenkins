@@ -1,32 +1,54 @@
 pipeline {
-    agent any
+    agent {}
     stages {
-        stage('Build') {
+        stage('Build'){
             steps {
                 script {
                     sh """
-                    echo "Hello World"
+                    echo "Hello sai this is the stage1 in pipeline"
                     """
                 }
             }
         }
-        stage('Test') {
+        stage('Test'){
             steps {
                 script {
                     sh """
-                    echo "Hello sai"
+                    echo "This is the stage 2 in the pipeline"
                     """
                 }
             }
         }
-        stage('Deploy') {
+        stage('Deploy'){
             steps {
-                script {
+                scripts {
                     sh """
-                        echo "Hello kiran"
+                    echo "Hello this is the stage 3 in the pipeline"
                     """
                 }
             }
         }
     }
 }
+
+
+// pipeline {
+//     agent any
+//     stages {
+//         stage('Build') {
+//             steps {
+//                 //
+//             }
+//         }
+//         stage('Test') {
+//             steps {
+//                 //
+//             }
+//         }
+//         stage('Deploy') {
+//             steps {
+//                 //
+//             }
+//         }
+//     }
+// }
