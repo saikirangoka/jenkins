@@ -1,11 +1,16 @@
 pipeline {
     agent { label 'agent4' }
+    environment {
+        PROJECT = 'Expense'
+        SERVICE = 'Bhp'
+    }
     stages {
         stage('Build'){
             steps {
                 script {
                     sh """
                     echo "Hello sai this is the stage1 in pipeline"
+                    echo "project: $PROJECT"
                     """
                 }
             }
