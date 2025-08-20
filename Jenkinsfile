@@ -55,7 +55,7 @@ pipeline {
             //     }
             // }
             when {
-                environment name: 'ENVIRONMENT', value: 'production'
+                environment name: 'ENVIRONMENT', value: 'QA'
             }
             steps {
                 script {
