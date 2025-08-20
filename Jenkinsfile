@@ -28,17 +28,17 @@ pipeline {
                 }
             }
         }
+    }
     post {
         always {
-            echo "Always run"
+            echo 'always shows'
         }
         failure {
-            echo "failure occurs"
+            echo 'failure occurs'
         }
         success {
-            echo "success occurs"
+            echo 'success occurs'
         }
-    }
     }
 }
 
