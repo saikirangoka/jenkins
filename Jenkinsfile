@@ -65,6 +65,29 @@ pipeline {
                 }
             }
         }
+        stage('Parallel Stages') {
+            parallel {
+                stage('In Parallel 1') {
+                    steps {
+                        script {
+                            sh """
+                            echo "This is command"
+                            sleep 15
+                            """
+                        }
+                    }
+                }
+                stage('In Parallel 2') {
+                    steps {
+                        script {
+                            sh """
+                            echo "This is second stage"
+                            """
+                        }
+                    }
+                }
+            }
+        }
     }
     post {
         always {
