@@ -4,6 +4,9 @@ pipeline {
         PROJECT = 'Expense'
         SERVICE = 'Bhp'
     }
+    options {
+        disableConcurrentBuilds()
+    }
     stages {
         stage('Build'){
             steps {
@@ -11,6 +14,7 @@ pipeline {
                     sh """
                     echo "Hello sai this is the stage1 in pipeline"
                     echo "project: $PROJECT"
+                    sleep 15
                     """
                 }
             }
