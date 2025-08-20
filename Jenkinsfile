@@ -92,6 +92,7 @@ pipeline {
     post {
         always {
             echo 'always shows'
+            deleteDir()
         }
         failure {
             echo 'failure occurs'
