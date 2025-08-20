@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                scripts {
+                script {
                     sh """
                     echo "Hello this is the stage 3 in the pipeline"
                     """
