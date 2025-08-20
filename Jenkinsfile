@@ -48,7 +48,7 @@ pipeline {
             steps {
                 script {
                     sh """
-                    echo "Hello this is the stage 3 in the pipeline"
+                    echo "Hello this is the stage 3 in the"
                     """
                 }
             }
